@@ -8,7 +8,6 @@ This is going to be a *steganography* program built on **C** later on if i make 
 <h3>A Little bit of theory</h3>
 C doesn't have a way to print binary numbers that's why i'm going to work on hex.
 Each 8bit colour is portrayed by 2 hexadecimal digits, from which we only care about the latter because that one contains the **LSB** which we need in order to hide our file without being noticed.
-
 In order to make a number **1** from **0** we only need to append the second hex number by 1
 
 `Example: if our second hex is an e we just make it an f.`
