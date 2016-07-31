@@ -45,3 +45,4 @@ In order to know what is the **LSB** of our hex we just have to use an integer d
 4. Scrambling of the data based on a string given by the user.
 5. _Decryption-Descrambling_
 6. Smart-Carving to find well hidden files in images.
+7. Support for other file-types.
