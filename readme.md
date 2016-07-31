@@ -36,3 +36,12 @@ In order to know what is the **LSB** of our hex we just have to use an integer d
 | 1101 | d |
 | 1110 | e |
 | 1111 | f |
+
+###Future Features
+
+1. Adding `int argc, char **argv` into the main function in order to work through terminal.
+2. Adding advanced mode where the program starts a menu that gives more options like the depth the data are going to be hidden in (more bits than **LSB** etc...)
+3. Encryption mode for the data to be hidden.
+4. Scrambling of the data based on a string given by the user.
+5. _Decryption-Descrambling_
+6. Smart-Carving to find well hidden files in images.
