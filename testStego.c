@@ -3,7 +3,8 @@
 
 int main(){
   FILE *g;
-  char oa[1000],buffer[100];
+  char oa[1000];
+  unsigned int *buffer;
   printf("\n Please give path of picture: ");
   gets(oa);
   g=fopen(oa,"rb+");
@@ -13,8 +14,8 @@ int main(){
   }else
   printf("\n File successfully opened\n");
 while(!feof(g)){
-  fread(buffer,sizeof(char),3,g);
-  printf("\n%s", buffer);
+  fread(&buffer,sizeof(char),1,g);
+  printf("\n %x", buffer);
 }
 return(0);
 }
