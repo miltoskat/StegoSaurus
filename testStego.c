@@ -3,7 +3,7 @@
 
 int main(){
   FILE *g;
-  char oa[1000],c,buffer[100];
+  char oa[1000],buffer[100];
   printf("\n Please give path of picture: ");
   gets(oa);
   g=fopen(oa,"rb+");
@@ -16,11 +16,5 @@ while(!feof(g)){
   fread(buffer,sizeof(char),3,g);
   printf("\n%s", buffer);
 }
-
-
-
-
-
-
 return(0);
 }
