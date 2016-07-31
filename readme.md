@@ -1,11 +1,11 @@
-<h2>Steganography Project</h2>
+##Steganography Project
 
 This is going to be a *steganography* program built on **C** later on if i make it I'm going to add a **Java GUI** for Android devices.
 
 
 
 
-<h3>A Little bit of theory</h3>
+###A Little bit of theory
 C doesn't have a way to print binary numbers that's why i'm going to work on hex.
 Each 8bit colour is portrayed by 2 hexadecimal digits, from which we only care about the latter because that one contains the **LSB** which we need in order to hide our file without being noticed.
 
