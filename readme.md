@@ -17,3 +17,22 @@ In order to make a number **0** from **1** we only need to subtract 1 from the s
 
 `Example: if our second hex is an f we just make it an e.`
 In order to know what is the **LSB** of our hex we just have to use an integer division and see if the modulus of our division is 0. If the modulus is 0 then the number is an *even* and the **LSB** is a 0, else if the number is *odd* then the **LSB** is a 1.
+
+| Bin  |Hex|
+|------|---|
+| 0000 | 0 |
+| 0001 | 1 |
+| 0010 | 2 |
+| 0011 | 3 |
+| 0100 | 4 |
+| 0101 | 5 |
+| 0110 | 6 |
+| 0111 | 7 |
+| 1000 | 8 |
+| 1001 | 9 |
+| 1010 | a |
+| 1011 | b |
+| 1100 | c |
+| 1101 | d |
+| 1110 | e |
+| 1111 | f |
