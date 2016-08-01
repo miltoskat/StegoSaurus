@@ -47,4 +47,4 @@ In order to know what is the **LSB** of our hex we just have to use an integer d
 6. Smart-Carving to find well hidden files in images.
 7. Support for other file-types.
 
-A little cheat seat of our code will be found [here](https://github.com/miltoskat/StegoProject/blob/master/sxediagrama.md)
+A little cheat seat of our code in Greek will be found [here](https://github.com/miltoskat/StegoProject/blob/master/sxediagrama.md)
