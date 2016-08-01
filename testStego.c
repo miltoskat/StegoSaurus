@@ -15,7 +15,7 @@ int main(){
   printf("\n File successfully opened\n");
 while(!feof(g)){
   fread(&buffer,sizeof(char),1,g);
-  printf("\n %x", buffer);
+  printf("\n %2x", buffer);
 }
 return(0);
 }
