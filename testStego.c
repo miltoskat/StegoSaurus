@@ -5,7 +5,7 @@
 
 int main(){
   FILE *f,*pic;
-  int c=0,flag=0,denied=0;
+  int c=0,flag=0;
   char oa[1000];
   char ob[1000];
   unsigned int bufferF,bufferP;
@@ -38,9 +38,6 @@ while(!feof(f)){
   }
   if (flag==0){
     printf("\n  File hex: %02x   NO MATCH FOUND",bufferF);
-    denied++;
-  }
-  if (denied>0){
     printf("\n\n Try a larger/more diverse file\n");
     return -1;
   }
