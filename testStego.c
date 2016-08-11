@@ -4,15 +4,15 @@
 #define KWHT  "\x1B[37m"
 
 int main(){
-  FILE *g,*pic;
+  FILE *f,*pic;
   int c=0,flag=0;
   char oa[1000];
   char ob[1000];
-  unsigned int buffer,buffer1;
+  unsigned int bufferF,bufferP;
   printf("\n Please give path of the file: ");
   gets(oa);
-  g=fopen(oa,"rb+");
-  if(!g){
+  f=fopen(oa,"rb+");
+  if(!f){
     printf("\n File not found");
     return -1;
   }else
@@ -26,18 +26,18 @@ int main(){
   }else
   printf("\n File successfully opened\n");
 
-while(!feof(g)){
-  fread(&buffer1,sizeof(char),1,g);
-  printf("\n Outer counter print c=%d",c);
+while(!feof(f)){
+  fread(&bufferF,sizeof(char),1,f);
   while(!feof(pic) && flag==0){
     c++;
-    fread(&buffer,sizeof(char),1,pic);
-    if(buffer1==buffer){
-      printf("\n Match found");
-      printf("\n %sInner counter print %sc=%d",KGRN,KWHT,c);
-      flag=0;
+    fread(&bufferP,sizeof(char),1,pic);
+    if(bufferF==bufferP){
+      //printf("\n Match found");
+      printf("\n File hex: %02x   Picture hex: %02x   counter= %d   counter hex: %02x",bufferF,bufferP,c,c);
+      flag=1;
     }
   }
+  fseek(pic, SEEK_SET, 0);
   flag=0;
   c=0;
 }
