@@ -37,6 +37,8 @@ while(!feof(f)){
       flag=1;
     }
   }
+  if (flag==0)
+  printf("NO MATCH FOUND FOR THIS BIT: %02x",bufferF);
   fseek(pic, SEEK_SET, 0);
   flag=0;
   c=0;
