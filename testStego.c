@@ -9,7 +9,7 @@ int main(){
   char oa[1000];
   char ob[1000];
   unsigned int bufferF,bufferP;
-  printf("\n Please give path of the file: ");
+  printf("\n Please give path of the %sfile%s: ",KGRN,KWHT);
   gets(oa);
   f=fopen(oa,"rb+");
   if(!f){
@@ -17,7 +17,7 @@ int main(){
     return -1;
   }else
   printf(" %s------------------------\n %sFile successfully opened\n %s------------------------%s",KGRN,KWHT,KGRN,KWHT);
-  printf("\n Please give the path of the picture: ");
+  printf("\n Please give the path of the %spicture%s: ",KGRN,KWHT);
   gets(ob);
   pic=fopen(ob,"rb+");
   if(!pic){
