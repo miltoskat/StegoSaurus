@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define KGRN  "\x1B[32m"
-#define KWHT  "\x1b[0m"
+#define KGRN  "\x1B[32m" //Green colour for the terminal
+#define KWHT  "\x1b[0m" //White colour for the terminal
 
 int main(){
   FILE *f,*pic;
