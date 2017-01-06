@@ -1,18 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define KGRN  "\x1B[32m" //Green colour for the terminal
+#define KWHT  "\x1b[0m" //White colour for the terminal
 
 int main(){
-  FILE *g;
-  int c1=0,c2=0;
+  FILE *f,*pic;
+  int c=0,flag=0;
   char oa[1000];
-  unsigned int buffer;
-  printf("\n Please give path of picture: ");
+  char ob[1000];
+  unsigned int bufferF,bufferP;
+  printf("\n Please give path of the %sfile%s: ",KGRN,KWHT);
   gets(oa);
-  g=fopen(oa,"rb+");
-  if(!g){
+  f=fopen(oa,"rb+");
+  if(!f){
     printf("\n File not found");
     return -1;
   }else
+<<<<<<< HEAD
   printf("\n File successfully opened\n");
 while(!feof(g)){
   fread(&buffer,sizeof(char),1,g);
@@ -27,6 +31,37 @@ while(!feof(g)){
   if (c2==16){
     c2=0;
     printf("\n");
+=======
+  printf(" %s------------------------\n %sFile successfully opened\n %s------------------------%s",KGRN,KWHT,KGRN,KWHT);
+  printf("\n Please give the path of the %spicture%s: ",KGRN,KWHT);
+  gets(ob);
+  pic=fopen(ob,"rb+");
+  if(!pic){
+    printf("\n File not found");
+    return -1;
+  }else
+  printf(" %s------------------------\n %sFile successfully opened\n %s------------------------%s",KGRN,KWHT,KGRN,KWHT);
+
+while(!feof(f)){
+  fread(&bufferF,sizeof(char),1,f);
+  if(!feof(f)){
+    while(!feof(pic) && flag==0){
+      c++;
+      fread(&bufferP,sizeof(char),1,pic);
+      if(bufferF==bufferP){
+        printf("\n File hex: %02x   Picture hex: %02x   counter= %d   counter hex: %02x",bufferF,bufferP,c,c);
+        flag=1;
+      }
+    }
+    if (flag==0){
+      printf("\n  File hex: %02x   NO MATCH FOUND",bufferF);
+      printf("\n\n Try a larger/more diverse file\n\n");
+      return -1;
+    }
+    fseek(pic, SEEK_SET, 0);
+    flag=0;
+    c=0;
+>>>>>>> args-functions
   }
 }
 }
