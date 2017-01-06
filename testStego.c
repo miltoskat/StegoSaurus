@@ -16,6 +16,22 @@ int main(){
     printf("\n File not found");
     return -1;
   }else
+<<<<<<< HEAD
+  printf("\n File successfully opened\n");
+while(!feof(g)){
+  fread(&buffer,sizeof(char),1,g);
+  if(!feof(g)){
+  printf("%02x", buffer);
+  c1++;
+  c2++;
+  if(c1==2){
+    c1=0;
+    printf(" ");
+  }
+  if (c2==16){
+    c2=0;
+    printf("\n");
+=======
   printf(" %s------------------------\n %sFile successfully opened\n %s------------------------%s",KGRN,KWHT,KGRN,KWHT);
   printf("\n Please give the path of the %spicture%s: ",KGRN,KWHT);
   gets(ob);
@@ -45,7 +61,9 @@ while(!feof(f)){
     fseek(pic, SEEK_SET, 0);
     flag=0;
     c=0;
+>>>>>>> args-functions
   }
+}
 }
 printf("\n");
 return(0);
